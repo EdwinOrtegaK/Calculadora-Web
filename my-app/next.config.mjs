@@ -1,4 +1,4 @@
-import Critters from 'critters';
+import Critters from 'critters-webpack-plugin';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,7 +8,6 @@ const nextConfig = {
   },
   webpack(config, { isServer }) {
     if (isServer) {
-      require('./scripts/generate-sitemap');
     }
     config.plugins.push(
       new Critters({
